@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Page</title>   
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="resources/bootstrap.min.css" type="text/css"/>
+ <link rel="stylesheet" href="style.css" type="text/css">
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+
+.login-container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.login-logo{
+    position: relative;
+    margin-left: -41.5%;
+}
+.login-logo img{
+    position: absolute;
+    width: 20%;
+    margin-top: 15%;
+    background: #282726;
+    border-radius: 5rem;
+    padding: 5%;
+    background-color:steelblue ;
+}
+.login-form-1{
+    padding: 9%;
+   
+    background:black;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-1 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color:#fff;
+}
+.login-form-2{
+    padding: 9%;
+    
+    background:midnightblue;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+    text-align: center;
+    margin-bottom:12%;
+    color: #fff;
+}
+.btnSubmit{
+    font-weight: 600;
+    width: 50%;
+    color: #282726;
+    background-color: #fff;
+    border: none;
+    border-radius: 1.5rem;
+    padding:2%;
+}
+.btnForgetPwd{
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+.btnForgetPwd:hover{
+    text-decoration:none;
+    color:#fff;
+}
+
+
+body {
+  background-color: steelblue;
+}
+.changetxt:hover{
+    font-size: 0;
+}
+.changetxt:hover:after{
+    content:attr(data-hover);
+    font-size: 20px;
+    color: yellowgreen;
+}
+.footer{
+	background-color: midnightblue;
+	margin-top: 0;
+	color: white;
+	text-align: center;
+	padding: 30px;
+    bottom: 0px;
+    width: 100%;
+    position: fixed;
+}
+.container,.login-container{
+	margin-bottom: 3%;
+	margin-top: 1;
+}
+.navbar{
+	margin-bottom: 2;
+}
+</style>
+
+</head>
+<body>
+
+<nav style="background-color:midnightblue" class="navbar navbar-inverse">
+  <div  style="color: red " class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button style="color: red " type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span  class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand changetxt" data-hover="About this Website" href="C:\Users\USER\Desktop\data mining\front.html">ONLINE MEDICAL</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+         <ul class="nav navbar-nav navbar-right" style="color:white;">
+            <li><a href="front.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="registration.html">Register</a></li>
+                <li><a href="index.html">Login</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-wrench"></span> SIGN UP <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+          <li><a href="registration.html" data-toggle="tooltip" data-placement="bottom" title="Students Register Here!"><span class="glyphicon glyphicon-plus-sign"></span>ONLINE MEDICAL</a></li>
+        </ul>
+      </li>
+         </ul>
+
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  <script>
+function LoginAdmin(frm){
+if(frm.email.value=="" && frm.password.value==""){
+    alert("Enter username and password");
+    return false;
+}
+if(frm.email.value=="admin@gmail.com"  && frm.password.value=="123"){
+    alert("Login Successful");
+    return true;
+}
+else{
+    alert("Incorrect Username or Password");
+    return false;
+}
+}
+
+
+</script> 
+<script>
+function LoginUser(frm){
+if(frm.email.value=="" && frm.password.value==""){
+    alert("Enter username and password");
+    return false;
+}
+if(frm.email.value=="user@gmail.com"  && frm.password.value=="1234"){
+    alert("Login Successful");
+    return true;
+}
+else{
+    alert("Incorrect Username or Password");
+    return false;
+}
+}
+
+
+</script> 
+
+
+
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                <form action="admin/AdminHome.html" method="post" onsubmit="return LoginAdmin(this)">
+                    <h3> <a style="color: whitesmoke" >Admin Login</a>  </h3>
+                    
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>
+                       
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <div class="login-logo">
+                        <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt=""/>
+                    </div>
+                    <form action="user/StudentHome.html" method="post" onsubmit="return LoginUser(this)">
+                        <h3> <a class="changetxt" data-hover="For New Regs. Click Here" style="color: whitesmoke" href="registration.html">USERS LOGIN</a>  </h3>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" />
+                        </div>
+                        <div class="form-group" align="right">
+                            <input type="submit" class="btnSubmit" value="Login" />
+                        </div>   
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+
+ 
+      
+
+
+ 
+
+
+
+
+  <script src="resources/jquery.min.js"></script>
+  <script src="resources/bootstrap.min.js"></script>
+</body>
+</html>
